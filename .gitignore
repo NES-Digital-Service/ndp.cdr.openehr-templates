@@ -1,0 +1,37 @@
+# IDE files
+*.iml
+.idea/
+
+# Docs
+*.drawio.bkp
+
+# Logs
+*.log
+
+# Python files
+venv/
+
+# AWS Deploy Files
+.aws-sam/
+
+# Secrets files
+.env
+
+# Selenium
+chrome-data/
+
+# System/OS file
+.DS_Store
+
+# node_modules
+node_modules/
+
+# compile folder
+dist/
+build/
+*.bak
+*.zip
+
+# Test output
+jest-*.xml
+reports/

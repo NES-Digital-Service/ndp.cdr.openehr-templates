@@ -1,0 +1,87 @@
+archetype (adl_version=1.4; uid=8bb5a344-ef7b-4db1-a636-a3d020172bfb)
+	openEHR-EHR-SECTION.nhs_care_scotland__nds_his_coronaacp_sections.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2020-03-26">
+		["name"] = <"Dr Paul Miller">
+		["organisation"] = <"NES Digital Service">
+		["email"] = <"paul.miller@nes.scot.nhs.uk">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"bcf9744dee778eba75b9898c498681a9">
+		["build_uid"] = <"1e7e802a-c819-37d1-9a01-26ceb52845b7">
+	>
+
+definition
+	SECTION[at0000] matches {    -- NHS_Care_Scotland__NDS_HIS_CoronaACP_Sections
+		items cardinality matches {0..*; unordered} matches {
+			SECTION[at0001] occurrences matches {0..1} matches {    -- Preferences
+				items cardinality matches {0..*; unordered} matches {
+					SECTION[at0002] occurrences matches {0..1} matches {*}    -- The things you would like
+					SECTION[at0003] occurrences matches {0..1} matches {*}    -- The things you do not want
+					SECTION[at0004] occurrences matches {0..1} matches {*}    -- Any other information around preferences for care
+				}
+			}
+			SECTION[at0005] occurrences matches {0..1} matches {*}    -- Discussions about cardiopulmonary resuscitation
+			SECTION[at0006] occurrences matches {0..1} matches {*}    -- People involved in decisions about your care
+			SECTION[at0007] occurrences matches {0..1} matches {*}    -- Completion of form information
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"NHS_Care_Scotland__NDS_HIS_CoronaACP_Sections">
+					description = <"NHS_Care_Scotland__NDS_HIS_CoronaACP_Sections">
+				>
+				["at0001"] = <
+					text = <"Preferences">
+					description = <"*">
+				>
+				["at0002"] = <
+					text = <"The things you would like">
+					description = <"*">
+				>
+				["at0003"] = <
+					text = <"The things you do not want">
+					description = <"*">
+				>
+				["at0004"] = <
+					text = <"Any other information around preferences for care">
+					description = <"*">
+				>
+				["at0005"] = <
+					text = <"Discussions about cardiopulmonary resuscitation">
+					description = <"*">
+				>
+				["at0006"] = <
+					text = <"People involved in decisions about your care">
+					description = <"*">
+				>
+				["at0007"] = <
+					text = <"Completion of form information">
+					description = <"*">
+				>
+			>
+		>
+	>
